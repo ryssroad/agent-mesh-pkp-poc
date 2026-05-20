@@ -1,0 +1,14 @@
+.env
+.env.*
+*.sqlite
+*.sqlite3
+*.db
+*.tmp
+*.bak
+__pycache__/
+.DS_Store
+kv/shards/
+*.kv
+*.kv.zst
+*.bin
+*.safetensors

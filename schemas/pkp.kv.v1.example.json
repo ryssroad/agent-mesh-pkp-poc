@@ -1,0 +1,51 @@
+{
+  "schema": "agent_mesh.pkp.kv.v1",
+  "kv_id": "kv_example_01",
+  "status": "sealed",
+  "purpose": "fast_continuation",
+  "compatibility": {
+    "model_id": "local-model-name",
+    "model_hash": "sha256:example",
+    "tokenizer_hash": "sha256:example",
+    "chat_template_hash": "sha256:example",
+    "runtime": "local-runtime",
+    "runtime_version": "example",
+    "kv_layout": "runtime-specific-layer-major",
+    "rope_config_hash": "sha256:example",
+    "quantization": "q4_kv_custom"
+  },
+  "span": {
+    "token_start": 0,
+    "token_end": 8192,
+    "position_base": 0,
+    "attention_mask_hash": "sha256:example"
+  },
+  "privacy": {
+    "level": "runtime_ephemeral",
+    "owner": "same-owner",
+    "allowed_consumers": ["local-worker-1"],
+    "not_before": "2026-05-20T20:21:51Z",
+    "expires_at": "2026-05-20T22:21:51Z"
+  },
+  "encoding": {
+    "tensor_dtype_source": "fp16",
+    "storage_dtype": "q4_kv",
+    "compression": "zstd",
+    "chunking": "per_layer",
+    "checksum_algorithm": "sha256"
+  },
+  "shards": [
+    {
+      "layer": 0,
+      "path": "shards/layer_000.kv.zst",
+      "sha256": "example",
+      "bytes": 123456
+    }
+  ],
+  "security": {
+    "encrypted": true,
+    "signature": "ed25519:example",
+    "reject_if_unsigned": true,
+    "accept_external": false
+  }
+}
